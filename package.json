@@ -1,0 +1,29 @@
+{
+  "name": "campusconnect-ai",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Multimodal agentic lost-and-found recovery system for campuses",
+  "scripts": {
+    "dev": "concurrently -k \"npm:server:dev\" \"npm:client:dev\"",
+    "server:dev": "node --watch server/index.js",
+    "client:dev": "vite --config client/vite.config.js --host 127.0.0.1",
+    "build": "vite build --config client/vite.config.js",
+    "start": "node server/index.js",
+    "check": "node --check server/index.js && node --check server/agents.js && node --check server/store.js"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.0.4",
+    "concurrently": "^9.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "lucide-react": "^0.575.0",
+    "mongodb": "^6.21.0",
+    "multer": "^2.0.2",
+    "openai": "^5.12.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "vite": "^7.3.1"
+  }
+}
